@@ -29,12 +29,12 @@ function getTapCoverageFixtureReport() {
     '# test              |        |          |         | ',
     '#  fixtures         |        |          |         | ',
     '#   test-runner     |        |          |         | ',
-    '#    coverage.js    |  78.65 |    38.46 |   60.00 | 12-13 16-22 27 39 43-44 61-62 66-67 71-72',
+    '#    coverage.js    |  78.65 |    46.15 |   60.00 | 12-13 16-22 27 39 43-44 61-62 66-67 71-72',
     '#    invalid-tap.js | 100.00 |   100.00 |  100.00 | ',
     '#   v8-coverage     |        |          |         | ',
     '#    throw.js       |  71.43 |    50.00 |  100.00 | 5-6',
     '# --------------------------------------------------------------------------------------------',
-    '# all files         |  78.35 |    43.75 |   60.00 | ',
+    '# all files         |  78.35 |    50.00 |   60.00 | ',
     '# --------------------------------------------------------------------------------------------',
     '# end of coverage report',
   ].join('\n');
@@ -53,7 +53,7 @@ const reporter = fixtures.fileURL('test-runner/custom_reporters/coverage.mjs');
 const coverages = [
   { flag: '--test-coverage-lines', name: 'line', actual: 78.35 },
   { flag: '--test-coverage-functions', name: 'function', actual: 60.00 },
-  { flag: '--test-coverage-branches', name: 'branch', actual: 43.75 },
+  { flag: '--test-coverage-branches', name: 'branch', actual: 50.00 },
 ];
 
 for (const coverage of coverages) {
